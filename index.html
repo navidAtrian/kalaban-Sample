@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"
+        integrity="sha512-Dz4zO7p6MrF+VcOD6PUbA08hK1rv0hDv/wGuxSUjImaUYxRyK2gLC6eQWVqyDN9IM1X/kUA8zkykJS/gEVOd3w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="side-bar">
+        <div class="side-bar-header">
+            <i class="fa fa-archive white header-icon" aria-hidden="true"></i>
+            <span class="side-bar-header-text white">KALABAN</span>
+        </div>
+        <div class="side-bar-rows">
+            <i class="fa fa-tachometer row-color " aria-hidden="true"></i>
+            <span class="side-bar-row-text row-color">Dashboard</span>
+        </div>
+        <div class="side-bar-rows">
+            <i class="fa fa-users row-color " aria-hidden="true"></i>
+            <span class="side-bar-row-text row-color">Teams</span>
+        </div>
+        <div class="side-bar-rows">
+            <i class="fa fa-shopping-bag row-color " aria-hidden="true"></i>
+            <span class="side-bar-row-text row-color">WebShops</span>
+        </div>
+        <div class="side-bar-rows">
+            <i class="fa fa-bar-chart row-color " aria-hidden="true"></i>
+            <span class="side-bar-row-text row-color">Reporting Server</span>
+            <i class="fa fa-external-link row-color hide" aria-hidden="true"></i>
+        </div>
+        <div class="side-bar-rows">
+            <i class="fa fa-credit-card row-color " aria-hidden="true"></i>
+            <span class="side-bar-row-text row-color">Transactions</span>
+        </div>
+        <div class="side-bar-rows">
+            <i class="fa fa-phone row-color " aria-hidden="true"></i>
+            <span class="side-bar-row-text row-color">Contact Logs</span>
+        </div>
+        <div class="side-bar-rows">
+            <i class="fa fa-usd row-color " aria-hidden="true"></i>
+            <span class="side-bar-row-text row-color">Pricing & Plans</span>
+        </div>
+        <div class="side-bar-rows">
+            <i class="fa fa-print row-color " aria-hidden="true"></i>
+            <span class="side-bar-row-text row-color">Print Templates</span>
+        </div>
+        <div class="side-bar-rows">
+            <i class="fa fa-pencil row-color " aria-hidden="true"></i>
+            <span class="side-bar-row-text row-color">Review</span>
+        </div>
+        <div class="side-bar-rows">
+            <i class="fa fa-picture-o row-color " aria-hidden="true"></i>
+            <span class="side-bar-row-text row-color">Media Inspector</span>
+        </div>
+        <div class="side-bar-rows">
+            <i class="fa fa-wrench row-color " aria-hidden="true"></i>
+            <span class="side-bar-row-text row-color">Data Check / Fix</span>
+        </div>
+        <div class="side-bar-rows">
+            <i class="fa fa-list-alt row-color " aria-hidden="true"></i>
+            <span class="side-bar-row-text row-color">Logs</span>
+        </div>
+        <div class="side-bar-rows">
+            <i class="fa fa-cog row-color " aria-hidden="true"></i>
+            <span class="side-bar-row-text row-color">System Configuration</span>
+        </div>
+        <div class="side-bar-rows">
+            <i class="fa fa-power-off row-color " aria-hidden="true"></i>
+            <span class="side-bar-row-text row-color">Logout</span>
+        </div>
+    </div>
+    <div id="myGrid" class="ag-theme-quartz grid" style="height: calc(100vh - 2px);"></div>
+</body>
+<script src="main.js"></script>
+
+</html>

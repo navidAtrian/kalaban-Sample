@@ -1,0 +1,228 @@
+@font-face {
+    font-family: "FA";
+    src: url("./Ravi.ttf") format("truetype");
+}
+
+.white {
+    color: #FFFFFF;
+}
+
+.row-color {
+    color: #c0bebe;
+    cursor: pointer;
+}
+
+.side-bar-rows:hover .row-color {
+    color: #FFFFFF;
+}
+
+body {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 5px;
+    width: calc(100vw - 15px);
+    height: calc(100vh - 10px);
+    flex-direction: row;
+    display: flex;
+}
+
+.grid {
+    flex: 1;
+    align-self: flex-end;
+    width: 80%;
+    transition: 0.7s;
+}
+
+.side-bar {
+    width: 20%;
+    height: calc(100vh - 10px);
+    background-color: rgb(4, 58, 82);
+    display: flex;
+    flex-direction: column;
+    transition: 0.7s;
+}
+
+.header-icon {
+    font-size: 40px;
+}
+
+.side-bar-header {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-bar-rows {
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.side-bar-header-text {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.side-bar-row-text {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cell-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cell-text {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'FA';
+}
+
+.value-container {
+    background-color: #5e5e5e;
+    height: 20px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.value-text {
+    padding-left: 7px;
+    padding-right: 7px;
+    color: #FFFFFF;
+}
+
+.cell-image {
+    height: 35px;
+    width: 35px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.ag-theme-quartz {
+    --ag-odd-row-background-color: rgb(0, 0, 0, 0.03);
+}
+
+
+.new-team-button {
+    padding: 5px 10px;
+    background-color: rgba(2, 41, 237, 0.674);
+    color: #FFFFFF;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.send-push-button {
+    padding: 5px 10px;
+    background-color: rgb(8, 179, 168);
+    color: #FFFFFF;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.button-filter-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: -35px;
+    cursor: pointer;
+}
+
+.button-image {
+    width: 15px;
+    height: 18px;
+    padding-top: 3px;
+}
+
+.button-text {
+    color: #FFFFFF;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.expire {
+    color: rgb(255, 0, 0, 0.5);
+}
+
+.demo {
+    color: rgb(255, 255, 0, 0.5);
+}
+
+.shop-cell-text {
+    color: green;
+}
+
+.shop-cell-text-expire {
+    color: rgb(0, 128, 0, 0.5);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.shop-cell-text-demo {
+    color: rgb(194, 196, 194);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.expire-cell-text {
+    color: #000000;
+}
+
+.expired-cell-text {
+    color: red;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.expired_icon {
+    color: red;
+}
+
+.notify {
+    color: #FFFFFF;
+    background-color: rgb(8, 179, 168);
+    border-radius: 4px;
+    padding: 3px;
+}
+
+@media (max-width:980px) {
+    .side-bar {
+        width: 60px;
+    }
+
+    .grid {
+        flex: 1;
+        align-self: flex-end;
+        width: calc(100% - 60px);
+    }
+    .side-bar-header-text {
+        display: none;
+    }
+
+    .side-bar-row-text {
+        display: none;
+    }
+    .hide{
+        display: none;
+    }
+}
