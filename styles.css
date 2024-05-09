@@ -41,6 +41,8 @@ body {
     display: flex;
     flex-direction: column;
     transition: 0.7s;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .header-icon {
