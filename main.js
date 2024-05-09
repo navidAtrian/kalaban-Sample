@@ -1,9 +1,11 @@
-const titleInit = (data) => {
-    const value = data.value.split(',')[0];
-    const link = data.value.split(',')[1];
+const titleInit = (item) => {
+    const value = item.value.split(',')[0];
+    const link = item.value.split(',')[1];
+    const status = item.data.webshopStatus;
     const cellContainer = document.createElement("div");
-    let cellImage = document.createElement("img");
-    let cellText = document.createElement("span");
+    const cellImage = document.createElement("img");
+    const cellText = document.createElement("span");
+    const cellIconContainer = document.createElement("div");
     cellContainer.className = "cell-container";
     cellImage.className = "cell-image";
     cellText.className = "cell-text";
@@ -11,6 +13,10 @@ const titleInit = (data) => {
     cellImage.src = link;
     cellContainer.appendChild(cellImage);
     cellContainer.appendChild(cellText);
+    if (status === 'expired') {
+        cellIconContainer.innerHTML = `<i class="fa fa-minus-square expired_icon" aria-hidden="true"/>`
+        cellContainer.appendChild(cellIconContainer)
+    };
 
     return cellContainer;
 }
@@ -21,6 +27,7 @@ const subscribeInit = (data) => {
     const valueContainer = document.createElement("div");
     const valueText = document.createElement("span");
     const cellText = document.createElement("span");
+    
     cellContainer.className = "cell-container";
     valueContainer.className = "value-container";
     valueText.className = "value-text";
@@ -49,7 +56,7 @@ class newTeamButton {
     init(params) {
         this.eGui = document.createElement('div');
         this.eGui.classList.add('button-header-container');
-        let button = document.createElement("button");
+        const button = document.createElement("button");
         button.className = "new-team-button";
         button.textContent = "New Team";
         this.eventListener = () => alert("New Team clicked");
@@ -99,8 +106,8 @@ const webShopInit = (item) => {
     const plan = item.data.webshopPlan;
     const status = item.data.webshopStatus;
     const cellContainer = document.createElement("div");
-    let cellIconContainer = document.createElement("div");
-    let cellText = document.createElement("span");
+    const cellIconContainer = document.createElement("div");
+    const cellText = document.createElement("span");
     cellContainer.className = "cell-container";
     cellText.className = plan === 'demo' ? "shop-cell-text-demo" :
         status === 'expired' ? "shop-cell-text-expire" : "shop-cell-text";
@@ -132,8 +139,8 @@ const expireInit = (item) => {
     const now = moment()
     const days = expireDate.diff(now, 'days')
     const cellContainer = document.createElement("div");
-    let cellIconContainer = document.createElement("div");
-    let cellText = document.createElement("span");
+    const cellIconContainer = document.createElement("div");
+    const cellText = document.createElement("span");
     cellContainer.className = "cell-container";
     cellText.className = Number(days) > 0 ? "expire-cell-text" :
         "expired-cell-text";
@@ -148,7 +155,7 @@ const expireInit = (item) => {
 
 const notifyInit = () => {
     const cellContainer = document.createElement("div");
-    let cellIconContainer = document.createElement("div");
+    const cellIconContainer = document.createElement("div");
     cellIconContainer.innerHTML = `<i class="fa fa-bug notify" aria-hidden="true"/>`
     cellContainer.appendChild(cellIconContainer)
     return cellContainer;
